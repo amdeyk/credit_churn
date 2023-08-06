@@ -96,7 +96,7 @@ jobs:
     - name: Push the Docker Image
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER_NAME }}
-      run: docker push $DOCKER_USER/bikeshare-fastapi
+      run: docker push $DOCKER_USER/bank-fastapi
 
     - name: Logout to Docker hub
       run: docker logout
