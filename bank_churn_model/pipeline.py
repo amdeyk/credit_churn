@@ -10,7 +10,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.ensemble import RandomForestClassifier
-from catboost import CatBoostClassifier
 from bank_churn_model.config.core import config
 from bank_churn_model.processing.features import CategoryImputer, OutlierClipper, UnusedFieldsDropper
 
