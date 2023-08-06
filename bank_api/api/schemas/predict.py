@@ -6,7 +6,7 @@ from bank_churn_model.processing.validation import DataInputSchema
 class PredictionResults(BaseModel):
     errors: Optional[Any]
     version: str
-    predictions: Optional[int]
+    predictions: Optional[List[str]]  # Changed from int to List[str]
 
 
 class MultipleDataInputs(BaseModel):
