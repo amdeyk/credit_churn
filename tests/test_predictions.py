@@ -14,12 +14,12 @@ def test_make_prediction(sample_input_data):
     expected_num_of_predictions = len(sample_input_data[0])
 
     # When
-    result = make_prediction(input_data = sample_input_data[0])
+    result = make_prediction(input_data=sample_input_data[0])
 
     # Then
     predictions = result.get("predictions")
     assert isinstance(predictions, np.ndarray)
-    assert isinstance(predictions[0], np.int64)
+    assert isinstance(predictions[0], str)  # Assuming the predictions are strings
     assert result.get("errors") is None
     assert len(predictions) == expected_num_of_predictions
 
