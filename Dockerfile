@@ -5,13 +5,13 @@ FROM python:3.10
 ADD ./bank_api /bank_api
 
 # specify working directory
-WORKDIR /bank_api/api
+WORKDIR /bank_api
 
 # update PIP 
 RUN pip install --upgrade pip
 
 # install dependencies
-RUN pip install -r ../requirements.txt
+RUN pip install -r requirements.txt
 
 # expose port for application
 EXPOSE 8001
