@@ -2,7 +2,7 @@
 FROM python:3.10
 
 # copy application files
-ADD /bank_api /bank_api
+ADD ./bank_api /bank_api
 
 # specify working   directory
 WORKDIR /bank_api
