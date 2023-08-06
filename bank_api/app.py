@@ -36,6 +36,10 @@ async def predict(input_data: schemas.MultipleDataInputs) -> Any:
     
     results = make_prediction(input_data=input_df.replace({np.nan: None}))
 
+    # Convert the 'predictions' NumPy array to a list
+    if 'predictions' in results:
+        results['predictions'] = results['predictions'].tolist()
+
     if results["errors"] is not None:
         raise HTTPException(status_code=400, detail=json.loads(results["errors"]))
 
